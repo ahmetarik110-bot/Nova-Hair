@@ -7,9 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Google Giriş API Kütüphanesi -->
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 
@@ -51,41 +48,8 @@
 <script>
 window.addEventListener('load', () => {
   const loader = document.querySelector('.intro-loader');
-  
-  // Giriş efekti (1.2 saniye sonra fade-out olmaya başlıyor)
-  setTimeout(() => { 
-    loader.classList.add('fade-out'); 
-    
-    // Giriş efekti animasyonu bittikten hemen sonra Google Giriş'i başlat (Örn: 500ms sonra)
-    setTimeout(() => {
-        triggerGoogleOneTap();
-    }, 500);
-
-  }, 1200);
+  setTimeout(() => { loader.classList.add('fade-out'); }, 1200);
 });
-
-// Otomatik Google Giriş Penceresini Tetikleyen Fonksiyon
-function triggerGoogleOneTap() {
-    if (typeof google !== 'undefined') {
-        google.accounts.id.initialize({
-            client_id: "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com", // Buraya Google Cloud Console'dan alacağın Client ID gelecek
-            callback: handleCredentialResponse
-        });
-        
-        // Ekranın sağ üst köşesinde One Tap giriş penceresini açar
-        google.accounts.id.prompt((notification) => {
-            if (notification.isNotDisplayed()) {
-                console.log("One Tap penceresi otomatik olarak gösterilemedi.");
-            }
-        });
-    }
-}
-
-// Giriş başarılı olunca çalışacak fonksiyon
-function handleCredentialResponse(response) {
-    console.log("Google Giriş Başarılı! Token: " + response.credential);
-}
-
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 menuToggle.addEventListener('click', () => {

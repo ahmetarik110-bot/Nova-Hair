@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müşteri Görüşleri | NOVA HAIR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="navbar">
+  <div class="logo"><div class="logo-circle">N</div><div class="logo-text">NOVA HAIR</div></div>
+  <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+  <nav id="navMenu">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="tecrubemiz.html">Tecrübemiz</a>
+    <a href="neden-biz.html">Neden Biz</a>
+    <a href="fiyatlar.html">Fiyatlar</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="gorusler.html" class="active">Görüşler</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+</div>
+</header>
+
+<section class="section reviews-section" id="reviews">
+<div class="container reviews-container">
+  <div class="section-title"><h2>Müşteri Görüşleri</h2><p>NOVA HAIR müşteri yorumları</p></div>
+  <div id="reviewList">
+    <div class="review-card"><p>Muhteşem! Saç kesimi tam istediğim gibiydi ve hizmetler süperdi.</p><h4>Almedin Beganovic</h4><div class="review-stars">★★★★★</div></div>
+    <div class="review-card"><p>Harika bir deneyim! Renk tonum tam bana uydu.</p><h4>Elif Kaya</h4><div class="review-stars">★★★★☆</div></div>
+  </div>
+  <div class="add-review-box"><button id="openFormBtn">Yorum Yap</button></div>
+</div>
+</section>
+
+<div class="modal-overlay" id="reviewFormOverlay">
+  <div class="modal-content">
+    <h3>Yorum Yap</h3>
+    <div class="input-group"><input type="text" id="reviewName" placeholder="Adınız Soyadınız"></div>
+    <div class="input-group">
+     <select id="reviewRating" required>
+    <option value="">Puan Seçin</option>
+    <option value="5">5 Yıldız (Mükemmel)</option>
+    <option value="4">4 Yıldız (Çok İyi)</option>
+    <option value="3">3 Yıldız (Orta)</option>
+    <option value="2">2 Yıldız (Kötü)</option>
+    <option value="1">1 Yıldız (Çok Kötü)</option>
+</select>
+    </div>
+    <div class="input-group"><textarea id="reviewText" placeholder="Yorumunuz..."></textarea></div>
+    <button class="submit-btn" id="submitReview">Gönder</button>
+  </div>
+</div>
+
+<script>
+const openBtn = document.getElementById('openFormBtn');
+const overlay = document.getElementById('reviewFormOverlay');
+const submitBtn = document.getElementById('submitReview');
+const list = document.getElementById('reviewList');
+
+if (openBtn && overlay) {
+  openBtn.addEventListener('click', () => overlay.style.display = "flex");
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.style.display = "none"; });
+  
+  submitBtn?.addEventListener('click', () => {
+    const n = document.getElementById('reviewName').value.trim();
+    const t = document.getElementById('reviewText').value.trim();
+    const r = document.getElementById('reviewRating').value;
+    if (n && t) {
+      const d = document.createElement('div');
+      d.className = 'review-card';
+      d.innerHTML = `<p>${t}</p><h4>${n}</h4><div class="review-stars">${"★".repeat(r)}${"☆".repeat(5-r)}</div>`;
+      list.appendChild(d);
+      overlay.style.display = "none";
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda | NOVA HAIR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Öne Çıkan Uzmanlar Kartları İçin Hover Efekti -->
+    <style>
+        /* Kartların varsayılan geçiş yumuşaklığı ve hızı */
+        .experience-card {
+            transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease !important;
+        }
+        
+        /* Fare üzerine gelince hızlıca yukarı kayma ve gölge efekti */
+        .experience-card:hover {
+            transform: translateY(-10px) scale(1.02) !important;
+            box-shadow: 0 12px 25px rgba(141, 107, 79, 0.2) !important;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+<div class="navbar">
+  <div class="logo"><div class="logo-circle">N</div><div class="logo-text">NOVA HAIR</div></div>
+  <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+  <nav id="navMenu">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="hakkimizda.html" class="active">Hakkımızda</a>
+    <a href="tecrubemiz.html">Tecrübemiz</a>
+    <a href="neden-biz.html">Neden Biz</a>
+    <a href="fiyatlar.html">Fiyatlar</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="gorusler.html">Görüşler</a>
+    <a href="iletisim.html">İletişim</a>
+  </nav>
+</div>
+</header>
+
+<section class="section" id="about">
+<div class="container">
+<div class="section-title"><h2>Hakkımızda</h2><p>NOVA HAIR hakkında daha fazlası</p></div>
+<div class="about">
+<div class="about-image"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400" alt="NOVA HAIR Ekibi"></div>
+<div class="about-cards-wrapper">
+<div class="about-cards">
+<div class="about-card">
+    <i class="fa-solid fa-users"></i>
+    <h3>Kim Olduğumuz</h3>
+    <p>NOVA HAIR, geleneksel kuaförlük süreçlerini dijital dünya ile buluşturan yenilikçi bir platformdur.</p>
+    <p>Sektördeki köklü tecrübemizle, misafirlerimizin saç yapılarını ogrenip tarzlarını analiz ederek çözümler üretiyoruz.</p>
+    <p>Küresel trendleri yakından takip eden uzman stilistlerimizle modern saç tasarımlarına imza atıyoruz.</p>
+    <p>Yüksek hijyen standartlarımız ve kaliteli ürün tercihlerimizle güvenli bir bakım ortamı sunuyoruz.</p>
+    <p>Müşteri memnuniyetini merkeze alarak kapımızdan giren her danışanımıza özel bir ilgi gösteriyoruz.</p>
+    <p>Gelişmiş dijital altyapımız sayesinde operasyonları hızlandırıp konforlu randevu deneyimi sağlıyoruz.</p>
+</div>
+
+<div class="about-card">
+    <i class="fa-solid fa-bullseye"></i>
+    <h3>Misyonumuz</h3>
+    <p>Temel misyonumuz, kuaförler ile kaliteli hizmet arayan müşterileri güvenli bir çatı altında buluşturmaktır.</p>
+    <p>Sağlık ve sterilizasyon kurallarından taviz vermeden, estetik algının rehberliğinde hizmet sunuyoruz.</p>
+    <p>Doğal güzellik hatlarını optimize eden uygulamalarla misafirlerimizin ruhunu ve bedenini tazeliyoruz.</p>
+    <p>Sürdürülebilirlik ilklerine bağlı kalarak doğaya ve insana saygılı sertifikalı ürünleri destekliyoruz.</p>
+    <p>Her ziyaretçimizin salonumuzdan tam memnuniyetle ve yenilenmiş bir özgüvenle ayrılmasını amaçlıyoruz.</p>
+    <p>Sektördeki tüm yerel işletmelerin dijitalleşmesine katkı sağlayarak şeffaf iş modelleri geliştiriyoruz.</p>
+</div>
+
+<div class="about-card">
+    <i class="fa-solid = fa-eye"></i>
+    <h3>Vizyonumuz</h3>
+    <p>Kişisel bakım endüstrisinde dünya standartlarında bir dijital dönüşüme öncülük etmeyi hedefliyoruz.</p>
+    <p>Teknolojinin gücü ile sanatın estetik ruhunu harmanlayarak küresel düzeyde lider marka olmak istiyoruz.</p>
+    <p>Bakım ritüellerini lüks olmaktan çıkarıp herkes için erişilebilir bütünsel bir standarda dönüştürüyoruz.</p>
+    <p>Yapay zeka destekli analiz sistemlerini çok yakından operasyonel süreçlerimize dahil etmeyi planlıyoruz.</p>
+    <p>Kuracağımız uluslararası akademi yapılanmasıyla sektöre vizyoner ve nitelikli yeni profesyoneller yetiştiriyoruz.</p>
+    <p>Evrensel güzellik algılarını tek bir potada eriterek metropollerde adından söz ettiren otorite olacağız.</p>
+</div>
+</div>
+<button class="about-slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+<button class="about-slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+</div>
+
+<hr style="border: 0; height: 1px; background: rgba(141, 107, 79, 0.2); margin: 70px 0 50px 0;">
+
+<div class="section-title" style="margin-bottom: 40px;">
+    <h3>Öne Çıkan Uzmanlarımız</h3>
+</div>
+<div class="experience-grid">
+    <div class="experience-card">
+        <div style="width: 120px; height: 120px; margin: 0 auto 20px auto; border-radius: 50%; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500" alt="Melis Yılmaz" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Melis Yılmaz</h3>
+        <p style="color: #b38b6d; font-weight: 600; margin-bottom: 10px; font-size: 14px;">Kreatif Saç Tasarım Uzmanı</p>
+        <p style="font-size: 14px; color: #666; line-height: 1.6;">10 yılı aşkın tecrübesiyle modern kesim, renklendirme ve kişiye özel saç anatomisi analizi konularında uzman baş stilistimiz.</p>
+    </div>
+
+    <div class="experience-card">
+        <div style="width: 120px; height: 120px; margin: 0 auto 20px auto; border-radius: 50%; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=500" alt="Selin Demir" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Selin Demir</h3>
+        <p style="color: #b38b6d; font-weight: 600; margin-bottom: 10px; font-size: 14px;">Renk ve Mikro Kaynak Uzmanı</p>
+        <p style="font-size: 14px; color: #666; line-height: 1.6;">Ombre, sombre ve yeni nesil mikro kaynak uygulamalarında uluslararası sertifikalara sahip, değişim mimarımız.</p>
+    </div>
+
+    <div class="experience-card">
+        <div style="width: 120px; height: 120px; margin: 0 auto 20px auto; border-radius: 50%; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=500" alt="Aslı Kaya" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Aslı Kaya</h3>
+        <p style="color: #b38b6d; font-weight: 600; margin-bottom: 10px; font-size: 14px;">Saç Sağlığı & Bakım Uzmanı</p>
+        <p style="font-size: 14px; color: #666; line-height: 1.6;">Yıpranmış saçların medikal onarımı, keratin terapileri ve saç derisi sağlığı üzerine odaklanmış uzman danışmanımız.</p>
+    </div>
+</div>
+
+</div>
+</section>
+
+<footer>© 2026 NOVA HAIR — Tüm Hakları Saklıdır.</footer>
+
+<script>
+const aboutSlider = document.querySelector(".about-cards");
+const cards = document.querySelectorAll(".about-card");
+let index = 0;
+document.querySelector(".about-slider-btn.next").addEventListener("click", () => {
+  index = (index + 1) % cards.length;
+  aboutSlider.style.transform = `translateX(-${index * 100}%)`;
+});
+document.querySelector(".about-slider-btn.prev").addEventListener("click", () => {
+  index = (index - 1 + cards.length) % cards.length;
+  aboutSlider.style.transform = `translateX(-${index * 100}%)`;
+});
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+</script>
+</body>
+</html>

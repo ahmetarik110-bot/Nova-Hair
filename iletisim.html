@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | NOVA HAIR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<div class="navbar">
+  <div class="logo"><div class="logo-circle">N</div><div class="logo-text">NOVA HAIR</div></div>
+  <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+  <nav id="navMenu">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="tecrubemiz.html">Tecrübemiz</a>
+    <a href="neden-biz.html">Neden Biz</a>
+    <a href="fiyatlar.html">Fiyatlar</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="gorusler.html">Görüşler</a>
+    <a href="iletisim.html" class="active">İletişim</a>
+  </nav>
+</div>
+</header>
+
+<section class="section" id="contact">
+<div class="container">
+<div class="section-title"><h2>İletişim</h2><p>Bize ulaşın ve randevu oluşturun</p></div>
+<div class="contact-area">
+  
+  <div class="custom-contact-box">
+      <h2>Bize Ulaşın</h2>
+      <p class="sub-text">Tarzınızı yeniden keşfetmek, modern saç tasarımlarımızla imajınıza profesyonel bir dokunuş katmak veya randevunuzu planlamak için bizimle iletişime geçin. Kusursuz değişim sizi bekliyor.</p>
+      
+      <div class="info-card">
+          <div class="card-icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div class="card-details">
+              <h4>Adres</h4>
+              <p>Yeşilyurt, Yeşilyurt Cd. No:52<br>02290 Adıyaman Merkez/Adıyaman</p>
+          </div>
+      </div>
+      
+      <div class="info-card">
+          <div class="card-icon-box">
+              <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="card-details">
+              <h4>Telefon</h4>
+              <p>+90 555 555 55 55</p>
+          </div>
+      </div>
+      
+      <div class="info-card">
+          <div class="card-icon-box">
+              <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="card-details">
+              <h4>E‑posta</h4>
+              <p>info@novahair.com</p>
+          </div>
+      </div>
+      
+      <div class="social-row">
+          <a href="#" class="social-circle"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-circle"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-circle"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+  </div>
+
+  <div class="contact-form">
+      <h3>Bize Ulaşın</h3>
+      <form id="contactWebForm">
+          <div class="input-group"><input type="text" placeholder="Adınız Soyadınız" required></div>
+          <div class="input-group"><input type="email" placeholder="E‑posta" required></div>
+          <div class="input-group"><textarea placeholder="Mesajınız" required></textarea></div>
+          <button class="submit-btn">Gönder</button>
+      </form>
+  </div>
+</div>
+
+<!-- image_2f4fc3.jpg Görselindeki Gibi Başlıklı ve Hafif Kapalı Gri Çerçeveli Harita Kartı -->
+<div class="map-card-wrapper">
+    <h3>Bizi Haritada Bulun</h3>
+    <div class="map-container-inner">
+        <iframe src="https://maps.google.com/maps?q=Ye%C5%9Filyurt%2C%20Ye%C5%9Filyurt%20Cd.%20No%3A52%2C%2002290%20Ad%C4%B1yaman%20Merkez%2FAd%C4%B1yaman&t=&z=16&ie=UTF8&iwloc=B&output=embed" loading="lazy"></iframe>
+    </div>
+</div>
+
+</div>
+</section>
+
+<footer>© 2026 NOVA HAIR — Tüm Hakları Saklıdır.</footer>
+
+<script>
+// Form Gönderme Yönetimi
+document.getElementById('contactWebForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Mesajınız başarıyla iletildi. En kısa sürede dönüş sağlanacaktır.');
+    e.target.reset();
+});
+
+// Mobil Menü Yönetimi
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  menuToggle.querySelector('i').className = navMenu.classList.contains('active') ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+});
+</script>
+</body>
+</html>
